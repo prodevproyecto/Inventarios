@@ -1,3 +1,3 @@
 Este es un comentario
-Hola mundo
-Suma=(a+b)
+print("Hola mundo")
+Suma2=(a+b)
