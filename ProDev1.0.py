@@ -43,6 +43,33 @@ inventario = {}
 
 
 #Opcion 3 entrada de productos
+def Entrada_productos ():
+    codigoBusqueda = input("Ingrese el codigo del producto: ")
+    if codigoBusqueda in inventario:
+            cantidadIngresada = int(input("Cantidad a ingresar del producto: "))
+            inventario[codigoBusqueda]["Stock"] += cantidadIngresada
+            print(inventario)
+            print("Se actualizo el stock..")
+    else:
+            print("Producto no encontrado, No se actualizo el stock...")
+
+def Salida_productos():
+    codigo = input("Ingrese el codigo del producto: ")
+    if codigo != codigo:
+        print("No se puede registra la salida de un producto que no existe")
+    else:      
+        cantidaSalidad = int(input("Cantidad vendida del poducto: "))
+    if codigo in inventario :
+        inventario[codigo]["Stock"] -= cantidaSalidad
+        total = cantidaSalidad * inventario[codigo]["Precio"]
+        with open("recibo.txt", "w") as archivo:
+            archivo.write("RECIBO DE VENTA\n")
+            archivo.write(f"Producto: {inventario[codigo]["Descripcion"]}\n")
+            archivo.write(f"Cantidad: {cantidaSalidad}\n")
+            archivo.write(f"Precio unitario: ${inventario[codigo]["Precio"]}\n")
+            archivo.write(f"Total: ${total}\n")
+        
+        print("La compra se realizó con éxito. Recibo generado en 'recibo.txt'.")
 
 
 
