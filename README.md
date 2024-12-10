@@ -5,13 +5,9 @@ Proyecto que sirve para administrar el inventario ADSO14 Ficha 2999512
 Integrantes del Equipo
 
 1.Diana Pulido
-Líder del proyecto y participante activo del proyecto
 2.Fabian Ramírez
-Integrante y participante activo del proyecto
 3.Yeimer Martínez
-Integrante y participante activo del proyecto
 4.Arturo Alfaro
-Integrante y participante activo del proyecto
 
 
 La problemática
