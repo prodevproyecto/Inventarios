@@ -4,10 +4,7 @@ Proyecto que sirve para administrar el inventario ADSO14 Ficha 2999512
 
 Integrantes del Equipo
 
-1.Diana Pulido
-2.Fabian Ramírez
-3.Yeimer Martínez
-4.Arturo Alfaro
+1.Diana Pulido 2.Fabian Ramírez 3.Yeimer Martínez 4.Arturo Alfaro
 
 
 La problemática
