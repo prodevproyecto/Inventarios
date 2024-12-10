@@ -27,7 +27,16 @@ inventario = {}
 
 #Opcion 2 inventario de productos
 
-
+def Inventario_productos():
+    if not inventario:
+        print("El inventario está vacío")
+        return
+    print("Inventario de Productos")
+    for codigo, informacion in inventario.items():
+        print(f"Código: {codigo}")
+        print(f"  Descripción: {informacion['Descripcion']}")
+        print(f"  Precio: ${informacion['Precio']}")
+        print(f"  Stock: {informacion['Stock']}")
 
 
 
