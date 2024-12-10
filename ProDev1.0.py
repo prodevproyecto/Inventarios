@@ -7,14 +7,8 @@ inventario = {}
 #limpiar  
 def limpiar():
     os.system("cls")
-
-
-
-
-
-
+    
 #Opcion 1 resgistrar producto
-
 def Registrar_producto():
         codigo = str(uuid.uuid1(4))
         descripcion = str(input("Descripcion del producto: "))
@@ -26,18 +20,7 @@ def Registrar_producto():
         print(inventario)
         print("El producto se registro exitosamente...")
 
-
-
-
-
-
-
-
-
-
-
 #Opcion 2 inventario de productos
-
 def Inventario_productos():
     if not inventario:
         print("El inventario está vacío")
@@ -48,19 +31,6 @@ def Inventario_productos():
         print(f"  Descripción: {informacion['Descripcion']}")
         print(f"  Precio: ${informacion['Precio']}")
         print(f"  Stock: {informacion['Stock']}")
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #Opcion 3 entrada de productos
 def Entrada_productos ():
@@ -73,6 +43,7 @@ def Entrada_productos ():
     else:
             print("Producto no encontrado, No se actualizo el stock...")
 
+#Opcion 4 salida de productos
 def Salida_productos():
     codigo = input("Ingrese el codigo del producto: ")
     if codigo != codigo:
@@ -90,45 +61,6 @@ def Salida_productos():
             archivo.write(f"Total: ${total}\n")
         
         print("La compra se realizó con éxito. Recibo generado en 'recibo.txt'.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Opcion 4 salida de productos
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #Salir
 def salir():
