@@ -4,7 +4,9 @@ import uuid
 
 inventario = {}
 
-#limpiar
+#limpiar  
+def limpiar():
+    os.system("cls")
 
 
 
@@ -13,7 +15,16 @@ inventario = {}
 
 #Opcion 1 resgistrar producto
 
+def Registrar_producto():
+        codigo = str(uuid.uuid1(4))
+        descripcion = str(input("Descripcion del producto: "))
+        precio = float(input("Valor del producto [Unidad]: "))
+        stock = int(input("Ingrese la cantidad del producto: "))
 
+        inventario[codigo] = {"Descripcion": descripcion , "Precio": precio,  "Stock": stock}
+
+        print(inventario)
+        print("El producto se registro exitosamente...")
 
 
 
