@@ -1,6 +1,7 @@
 import os
 import uuid
-
+import sys#
+sys.stdout.reconfigure(encoding='utf-8')#
 
 inventario = {}
 
@@ -27,7 +28,7 @@ def Inventario_productos():
         return
     print("Inventario de Productos")
     for codigo, informacion in inventario.items():
-        print(f"Código: {codigo}")
+        print(f" Código: {codigo}")
         print(f"  Descripción: {informacion['Descripcion']}")
         print(f"  Precio: ${informacion['Precio']}")
         print(f"  Stock: {informacion['Stock']}")
@@ -46,11 +47,8 @@ def Entrada_productos ():
 #Opcion 4 salida de productos
 def Salida_productos():
     codigo = input("Ingrese el codigo del producto: ")
-    if codigo != codigo:
-        print("No se puede registra la salida de un producto que no existe")
-    else:      
+    if codigo in inventario:
         cantidaSalidad = int(input("Cantidad vendida del poducto: "))
-    if codigo in inventario :
         inventario[codigo]["Stock"] -= cantidaSalidad
         total = cantidaSalidad * inventario[codigo]["Precio"]
         with open("recibo.txt", "w") as archivo:
@@ -61,6 +59,8 @@ def Salida_productos():
             archivo.write(f"Total: ${total}\n")
         
         print("La compra se realizó con éxito. Recibo generado en 'recibo.txt'.")
+    else:
+        print("No se puede registra la salida de un producto que no existe")
 
 #Salir
 def salir():
